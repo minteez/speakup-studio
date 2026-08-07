@@ -10,33 +10,219 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AcknowledgementsRouteImport } from './routes/acknowledgements'
+import { Route as BuilderRouteImport } from './routes/builder'
+import { Route as CompetitionsRouteImport } from './routes/competitions'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as GuideRouteImport } from './routes/guide'
+import { Route as JourneyRouteImport } from './routes/journey'
+import { Route as MistakesRouteImport } from './routes/mistakes'
+import { Route as PracticeRouteImport } from './routes/practice'
+import { Route as QuotesRouteImport } from './routes/quotes'
+import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as SpeakersRouteImport } from './routes/speakers'
+import { Route as SpeechWritingRouteImport } from './routes/speech-writing'
+import { Route as TipsRouteImport } from './routes/tips'
+import { Route as VocabularyRouteImport } from './routes/vocabulary'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcknowledgementsRoute = AcknowledgementsRouteImport.update({
+  id: '/acknowledgements',
+  path: '/acknowledgements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuilderRoute = BuilderRouteImport.update({
+  id: '/builder',
+  path: '/builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompetitionsRoute = CompetitionsRouteImport.update({
+  id: '/competitions',
+  path: '/competitions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuideRoute = GuideRouteImport.update({
+  id: '/guide',
+  path: '/guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JourneyRoute = JourneyRouteImport.update({
+  id: '/journey',
+  path: '/journey',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MistakesRoute = MistakesRouteImport.update({
+  id: '/mistakes',
+  path: '/mistakes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PracticeRoute = PracticeRouteImport.update({
+  id: '/practice',
+  path: '/practice',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuotesRoute = QuotesRouteImport.update({
+  id: '/quotes',
+  path: '/quotes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SpeakersRoute = SpeakersRouteImport.update({
+  id: '/speakers',
+  path: '/speakers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SpeechWritingRoute = SpeechWritingRouteImport.update({
+  id: '/speech-writing',
+  path: '/speech-writing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TipsRoute = TipsRouteImport.update({
+  id: '/tips',
+  path: '/tips',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VocabularyRoute = VocabularyRouteImport.update({
+  id: '/vocabulary',
+  path: '/vocabulary',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acknowledgements': typeof AcknowledgementsRoute
+  '/builder': typeof BuilderRoute
+  '/competitions': typeof CompetitionsRoute
+  '/faq': typeof FaqRoute
+  '/guide': typeof GuideRoute
+  '/journey': typeof JourneyRoute
+  '/mistakes': typeof MistakesRoute
+  '/practice': typeof PracticeRoute
+  '/quotes': typeof QuotesRoute
+  '/resources': typeof ResourcesRoute
+  '/speakers': typeof SpeakersRoute
+  '/speech-writing': typeof SpeechWritingRoute
+  '/tips': typeof TipsRoute
+  '/vocabulary': typeof VocabularyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acknowledgements': typeof AcknowledgementsRoute
+  '/builder': typeof BuilderRoute
+  '/competitions': typeof CompetitionsRoute
+  '/faq': typeof FaqRoute
+  '/guide': typeof GuideRoute
+  '/journey': typeof JourneyRoute
+  '/mistakes': typeof MistakesRoute
+  '/practice': typeof PracticeRoute
+  '/quotes': typeof QuotesRoute
+  '/resources': typeof ResourcesRoute
+  '/speakers': typeof SpeakersRoute
+  '/speech-writing': typeof SpeechWritingRoute
+  '/tips': typeof TipsRoute
+  '/vocabulary': typeof VocabularyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acknowledgements': typeof AcknowledgementsRoute
+  '/builder': typeof BuilderRoute
+  '/competitions': typeof CompetitionsRoute
+  '/faq': typeof FaqRoute
+  '/guide': typeof GuideRoute
+  '/journey': typeof JourneyRoute
+  '/mistakes': typeof MistakesRoute
+  '/practice': typeof PracticeRoute
+  '/quotes': typeof QuotesRoute
+  '/resources': typeof ResourcesRoute
+  '/speakers': typeof SpeakersRoute
+  '/speech-writing': typeof SpeechWritingRoute
+  '/tips': typeof TipsRoute
+  '/vocabulary': typeof VocabularyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/acknowledgements'
+    | '/builder'
+    | '/competitions'
+    | '/faq'
+    | '/guide'
+    | '/journey'
+    | '/mistakes'
+    | '/practice'
+    | '/quotes'
+    | '/resources'
+    | '/speakers'
+    | '/speech-writing'
+    | '/tips'
+    | '/vocabulary'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/acknowledgements'
+    | '/builder'
+    | '/competitions'
+    | '/faq'
+    | '/guide'
+    | '/journey'
+    | '/mistakes'
+    | '/practice'
+    | '/quotes'
+    | '/resources'
+    | '/speakers'
+    | '/speech-writing'
+    | '/tips'
+    | '/vocabulary'
+  id:
+    | '__root__'
+    | '/'
+    | '/acknowledgements'
+    | '/builder'
+    | '/competitions'
+    | '/faq'
+    | '/guide'
+    | '/journey'
+    | '/mistakes'
+    | '/practice'
+    | '/quotes'
+    | '/resources'
+    | '/speakers'
+    | '/speech-writing'
+    | '/tips'
+    | '/vocabulary'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcknowledgementsRoute: typeof AcknowledgementsRoute
+  BuilderRoute: typeof BuilderRoute
+  CompetitionsRoute: typeof CompetitionsRoute
+  FaqRoute: typeof FaqRoute
+  GuideRoute: typeof GuideRoute
+  JourneyRoute: typeof JourneyRoute
+  MistakesRoute: typeof MistakesRoute
+  PracticeRoute: typeof PracticeRoute
+  QuotesRoute: typeof QuotesRoute
+  ResourcesRoute: typeof ResourcesRoute
+  SpeakersRoute: typeof SpeakersRoute
+  SpeechWritingRoute: typeof SpeechWritingRoute
+  TipsRoute: typeof TipsRoute
+  VocabularyRoute: typeof VocabularyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +234,124 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/acknowledgements': {
+      id: '/acknowledgements'
+      path: '/acknowledgements'
+      fullPath: '/acknowledgements'
+      preLoaderRoute: typeof AcknowledgementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/builder': {
+      id: '/builder'
+      path: '/builder'
+      fullPath: '/builder'
+      preLoaderRoute: typeof BuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/competitions': {
+      id: '/competitions'
+      path: '/competitions'
+      fullPath: '/competitions'
+      preLoaderRoute: typeof CompetitionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guide': {
+      id: '/guide'
+      path: '/guide'
+      fullPath: '/guide'
+      preLoaderRoute: typeof GuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/journey': {
+      id: '/journey'
+      path: '/journey'
+      fullPath: '/journey'
+      preLoaderRoute: typeof JourneyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mistakes': {
+      id: '/mistakes'
+      path: '/mistakes'
+      fullPath: '/mistakes'
+      preLoaderRoute: typeof MistakesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/practice': {
+      id: '/practice'
+      path: '/practice'
+      fullPath: '/practice'
+      preLoaderRoute: typeof PracticeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quotes': {
+      id: '/quotes'
+      path: '/quotes'
+      fullPath: '/quotes'
+      preLoaderRoute: typeof QuotesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/speakers': {
+      id: '/speakers'
+      path: '/speakers'
+      fullPath: '/speakers'
+      preLoaderRoute: typeof SpeakersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/speech-writing': {
+      id: '/speech-writing'
+      path: '/speech-writing'
+      fullPath: '/speech-writing'
+      preLoaderRoute: typeof SpeechWritingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tips': {
+      id: '/tips'
+      path: '/tips'
+      fullPath: '/tips'
+      preLoaderRoute: typeof TipsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vocabulary': {
+      id: '/vocabulary'
+      path: '/vocabulary'
+      fullPath: '/vocabulary'
+      preLoaderRoute: typeof VocabularyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcknowledgementsRoute: AcknowledgementsRoute,
+  BuilderRoute: BuilderRoute,
+  CompetitionsRoute: CompetitionsRoute,
+  FaqRoute: FaqRoute,
+  GuideRoute: GuideRoute,
+  JourneyRoute: JourneyRoute,
+  MistakesRoute: MistakesRoute,
+  PracticeRoute: PracticeRoute,
+  QuotesRoute: QuotesRoute,
+  ResourcesRoute: ResourcesRoute,
+  SpeakersRoute: SpeakersRoute,
+  SpeechWritingRoute: SpeechWritingRoute,
+  TipsRoute: TipsRoute,
+  VocabularyRoute: VocabularyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
