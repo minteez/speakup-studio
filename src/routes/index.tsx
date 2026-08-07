@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "SpeakUp — Free Public Speaking Guide for Students" },
       {
         property: "og:description",
-        content: "Everyone can become a great speaker. Free lessons, speech structures, tips and practice plans.",
+        content: "Learn public speaking, confidence, speech writing, stage presence and body language — absolutely free. A student-built educational project.",
       },
       { property: "og:url", content: "/" },
     ],

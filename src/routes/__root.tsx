@@ -80,16 +80,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SpeakUp — Speak with Confidence. Inspire with Words." },
+      { title: "SpeakUp — Free Public Speaking Guide for Students" },
       {
         name: "description",
         content:
-          "SpeakUp is a free public speaking guide for students: lessons, speech writing, competitions, tips and practice plans.",
+          "Learn public speaking, confidence, speech writing, stage presence and body language — absolutely free. A student-built educational project.",
       },
       { name: "author", content: "Minteez" },
       { property: "og:site_name", content: "SpeakUp" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "SpeakUp — Free Public Speaking Guide for Students" },
+      { name: "twitter:title", content: "SpeakUp — Free Public Speaking Guide for Students" },
+      { property: "og:description", content: "Learn public speaking, confidence, speech writing, stage presence and body language — absolutely free. A student-built educational project." },
+      { name: "twitter:description", content: "Learn public speaking, confidence, speech writing, stage presence and body language — absolutely free. A student-built educational project." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/14337b6d-e0cd-4231-9b1d-7855090ea476" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/14337b6d-e0cd-4231-9b1d-7855090ea476" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
