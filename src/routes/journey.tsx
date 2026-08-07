@@ -37,7 +37,7 @@ function JourneyPage() {
       <Section>
         <ol className="relative mx-auto max-w-3xl border-l border-border pl-8">
           {journey.map((step, i) => {
-            const Icon = icons[i % icons.length];
+            const Icon = icons[i % icons.length]!;
             return (
               <Reveal as="li" key={step.title} delay={i * 70} className="relative pb-10">
                 <span className="absolute -left-[3.05rem] grid size-9 place-items-center rounded-full gradient-hero text-primary-foreground shadow-soft">
