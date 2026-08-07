@@ -55,7 +55,7 @@ function build(topic: string, audience: string, minutes: string, tone: string, p
 
   return {
     opening: [
-      hooks[purpose] ?? hooks.Informative!,
+      hooks[purpose] ?? hooks["Informative"]!,
       `Greet the audience and introduce yourself in one line.`,
       `State your core message: "Today I want to show you why ${t} matters."`,
       `Preview your three main points so listeners know where you are going.`,
