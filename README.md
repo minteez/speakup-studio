@@ -1,5 +1,16 @@
 # 🎤 SpeakUp
 
+## Gallery
+Home Page
+<img width="1583" height="900" alt="image" src="https://github.com/user-attachments/assets/c30579f2-1bbb-4759-a358-6f728d554f86" />
+Beginner's Guide on Public Speaking (with PDF)
+<img width="1585" height="900" alt="image" src="https://github.com/user-attachments/assets/c38a622d-5552-4393-9180-8e3013093d05" />
+Speech Builder
+<img width="1583" height="900" alt="image" src="https://github.com/user-attachments/assets/50a17dee-47e6-4699-9117-07f53af27744" />
+Speaking Tips
+<img width="1582" height="900" alt="image" src="https://github.com/user-attachments/assets/de96bf83-b40f-47e4-815d-dcdeb2589464" />
+
+
 > **Speak with Confidence. Inspire with Words.**
 
 **SpeakUp** is a student-created public speaking resource designed to help young learners develop confidence, communication skills, speech-writing abilities, and effective stage presence.
