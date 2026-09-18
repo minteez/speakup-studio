@@ -11,7 +11,12 @@ Speaking Tips
 <img width="1582" height="900" alt="image" src="https://github.com/user-attachments/assets/de96bf83-b40f-47e4-815d-dcdeb2589464" />
 Vocabulary Page
 <img width="1583" height="900" alt="image" src="https://github.com/user-attachments/assets/468a69d4-83fe-4e83-a266-1e3a909de870" />
-
+Practice Page
+<img width="1584" height="900" alt="image" src="https://github.com/user-attachments/assets/ea6f8b50-6140-4e19-9127-e30db6c4a17d" />
+Famous Speakers Page
+<img width="1584" height="900" alt="image" src="https://github.com/user-attachments/assets/7dee8ea3-1e6c-45f5-85b5-4b29fe74c8e5" />
+FAQ page
+<img width="1582" height="900" alt="image" src="https://github.com/user-attachments/assets/06e168a2-7cf8-4ba3-8a95-7b022b42b154" />
 
 > **Speak with Confidence. Inspire with Words.**
 
