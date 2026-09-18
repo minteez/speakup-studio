@@ -9,6 +9,8 @@ Speech Builder
 <img width="1583" height="900" alt="image" src="https://github.com/user-attachments/assets/50a17dee-47e6-4699-9117-07f53af27744" />
 Speaking Tips
 <img width="1582" height="900" alt="image" src="https://github.com/user-attachments/assets/de96bf83-b40f-47e4-815d-dcdeb2589464" />
+Vocabulary Page
+<img width="1583" height="900" alt="image" src="https://github.com/user-attachments/assets/468a69d4-83fe-4e83-a266-1e3a909de870" />
 
 
 > **Speak with Confidence. Inspire with Words.**
