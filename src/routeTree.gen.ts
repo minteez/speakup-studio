@@ -12,10 +12,12 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AcknowledgementsRouteImport } from './routes/acknowledgements'
 import { Route as BuilderRouteImport } from './routes/builder'
+import { Route as CoachRouteImport } from './routes/coach'
 import { Route as CompetitionsRouteImport } from './routes/competitions'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GuideRouteImport } from './routes/guide'
 import { Route as JourneyRouteImport } from './routes/journey'
+import { Route as MentorRouteImport } from './routes/mentor'
 import { Route as MistakesRouteImport } from './routes/mistakes'
 import { Route as PracticeRouteImport } from './routes/practice'
 import { Route as QuotesRouteImport } from './routes/quotes'
@@ -40,6 +42,11 @@ const BuilderRoute = BuilderRouteImport.update({
   path: '/builder',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CoachRoute = CoachRouteImport.update({
+  id: '/coach',
+  path: '/coach',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CompetitionsRoute = CompetitionsRouteImport.update({
   id: '/competitions',
   path: '/competitions',
@@ -58,6 +65,11 @@ const GuideRoute = GuideRouteImport.update({
 const JourneyRoute = JourneyRouteImport.update({
   id: '/journey',
   path: '/journey',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentorRoute = MentorRouteImport.update({
+  id: '/mentor',
+  path: '/mentor',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MistakesRoute = MistakesRouteImport.update({
@@ -105,10 +117,12 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/acknowledgements': typeof AcknowledgementsRoute
   '/builder': typeof BuilderRoute
+  '/coach': typeof CoachRoute
   '/competitions': typeof CompetitionsRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
   '/journey': typeof JourneyRoute
+  '/mentor': typeof MentorRoute
   '/mistakes': typeof MistakesRoute
   '/practice': typeof PracticeRoute
   '/quotes': typeof QuotesRoute
@@ -122,10 +136,12 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/acknowledgements': typeof AcknowledgementsRoute
   '/builder': typeof BuilderRoute
+  '/coach': typeof CoachRoute
   '/competitions': typeof CompetitionsRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
   '/journey': typeof JourneyRoute
+  '/mentor': typeof MentorRoute
   '/mistakes': typeof MistakesRoute
   '/practice': typeof PracticeRoute
   '/quotes': typeof QuotesRoute
@@ -140,10 +156,12 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/acknowledgements': typeof AcknowledgementsRoute
   '/builder': typeof BuilderRoute
+  '/coach': typeof CoachRoute
   '/competitions': typeof CompetitionsRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
   '/journey': typeof JourneyRoute
+  '/mentor': typeof MentorRoute
   '/mistakes': typeof MistakesRoute
   '/practice': typeof PracticeRoute
   '/quotes': typeof QuotesRoute
@@ -159,10 +177,12 @@ export interface FileRouteTypes {
     | '/'
     | '/acknowledgements'
     | '/builder'
+    | '/coach'
     | '/competitions'
     | '/faq'
     | '/guide'
     | '/journey'
+    | '/mentor'
     | '/mistakes'
     | '/practice'
     | '/quotes'
@@ -176,10 +196,12 @@ export interface FileRouteTypes {
     | '/'
     | '/acknowledgements'
     | '/builder'
+    | '/coach'
     | '/competitions'
     | '/faq'
     | '/guide'
     | '/journey'
+    | '/mentor'
     | '/mistakes'
     | '/practice'
     | '/quotes'
@@ -193,10 +215,12 @@ export interface FileRouteTypes {
     | '/'
     | '/acknowledgements'
     | '/builder'
+    | '/coach'
     | '/competitions'
     | '/faq'
     | '/guide'
     | '/journey'
+    | '/mentor'
     | '/mistakes'
     | '/practice'
     | '/quotes'
@@ -211,10 +235,12 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AcknowledgementsRoute: typeof AcknowledgementsRoute
   BuilderRoute: typeof BuilderRoute
+  CoachRoute: typeof CoachRoute
   CompetitionsRoute: typeof CompetitionsRoute
   FaqRoute: typeof FaqRoute
   GuideRoute: typeof GuideRoute
   JourneyRoute: typeof JourneyRoute
+  MentorRoute: typeof MentorRoute
   MistakesRoute: typeof MistakesRoute
   PracticeRoute: typeof PracticeRoute
   QuotesRoute: typeof QuotesRoute
@@ -248,6 +274,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BuilderRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/coach': {
+      id: '/coach'
+      path: '/coach'
+      fullPath: '/coach'
+      preLoaderRoute: typeof CoachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/competitions': {
       id: '/competitions'
       path: '/competitions'
@@ -274,6 +307,13 @@ declare module '@tanstack/react-router' {
       path: '/journey'
       fullPath: '/journey'
       preLoaderRoute: typeof JourneyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentor': {
+      id: '/mentor'
+      path: '/mentor'
+      fullPath: '/mentor'
+      preLoaderRoute: typeof MentorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mistakes': {
@@ -339,10 +379,12 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AcknowledgementsRoute: AcknowledgementsRoute,
   BuilderRoute: BuilderRoute,
+  CoachRoute: CoachRoute,
   CompetitionsRoute: CompetitionsRoute,
   FaqRoute: FaqRoute,
   GuideRoute: GuideRoute,
   JourneyRoute: JourneyRoute,
+  MentorRoute: MentorRoute,
   MistakesRoute: MistakesRoute,
   PracticeRoute: PracticeRoute,
   QuotesRoute: QuotesRoute,
@@ -355,3 +397,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
