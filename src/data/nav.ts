@@ -7,6 +7,8 @@ export const navItems: NavItem[] = [
   { to: "/speech-writing", label: "Speech Writing", blurb: "Introduction, body, conclusion and seven speech structures including MUN" },
   { to: "/competitions", label: "Competitions", blurb: "Speech, debate, declamation, elocution, anchoring, MUN and more" },
   { to: "/builder", label: "Speech Builder", blurb: "Generate a speech outline from topic, audience, time, tone and purpose" },
+  { to: "/coach", label: "Practice Coach", blurb: "Timer, live transcript, pace and filler-word counter" },
+  { to: "/mentor", label: "My Mentor", blurb: "Mr. Jabir Thayyil — the teacher who started my journey" },
   { to: "/practice", label: "Practice Plans", blurb: "7-day routine and the 30-day public speaking challenge" },
   { to: "/vocabulary", label: "Vocabulary", blurb: "Word of the day, meanings, synonyms and pronunciation" },
   { to: "/speakers", label: "Famous Speakers", blurb: "How great communicators built their speaking skills" },
