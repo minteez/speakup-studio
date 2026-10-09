@@ -12,16 +12,21 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AcknowledgementsRouteImport } from './routes/acknowledgements'
 import { Route as BuilderRouteImport } from './routes/builder'
+import { Route as ChecklistRouteImport } from './routes/checklist'
 import { Route as CoachRouteImport } from './routes/coach'
 import { Route as CompetitionsRouteImport } from './routes/competitions'
+import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GuideRouteImport } from './routes/guide'
 import { Route as JourneyRouteImport } from './routes/journey'
 import { Route as MentorRouteImport } from './routes/mentor'
 import { Route as MistakesRouteImport } from './routes/mistakes'
+import { Route as MunBuilderRouteImport } from './routes/mun-builder'
+import { Route as PathwayRouteImport } from './routes/pathway'
 import { Route as PracticeRouteImport } from './routes/practice'
 import { Route as QuotesRouteImport } from './routes/quotes'
 import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as SpeakersRouteImport } from './routes/speakers'
 import { Route as SpeechWritingRouteImport } from './routes/speech-writing'
 import { Route as TipsRouteImport } from './routes/tips'
@@ -42,6 +47,11 @@ const BuilderRoute = BuilderRouteImport.update({
   path: '/builder',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ChecklistRoute = ChecklistRouteImport.update({
+  id: '/checklist',
+  path: '/checklist',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CoachRoute = CoachRouteImport.update({
   id: '/coach',
   path: '/coach',
@@ -50,6 +60,11 @@ const CoachRoute = CoachRouteImport.update({
 const CompetitionsRoute = CompetitionsRouteImport.update({
   id: '/competitions',
   path: '/competitions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -77,6 +92,16 @@ const MistakesRoute = MistakesRouteImport.update({
   path: '/mistakes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MunBuilderRoute = MunBuilderRouteImport.update({
+  id: '/mun-builder',
+  path: '/mun-builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PathwayRoute = PathwayRouteImport.update({
+  id: '/pathway',
+  path: '/pathway',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PracticeRoute = PracticeRouteImport.update({
   id: '/practice',
   path: '/practice',
@@ -90,6 +115,11 @@ const QuotesRoute = QuotesRouteImport.update({
 const ResourcesRoute = ResourcesRouteImport.update({
   id: '/resources',
   path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SkillsRoute = SkillsRouteImport.update({
+  id: '/skills',
+  path: '/skills',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SpeakersRoute = SpeakersRouteImport.update({
@@ -117,16 +147,21 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/acknowledgements': typeof AcknowledgementsRoute
   '/builder': typeof BuilderRoute
+  '/checklist': typeof ChecklistRoute
   '/coach': typeof CoachRoute
   '/competitions': typeof CompetitionsRoute
+  '/dashboard': typeof DashboardRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
   '/journey': typeof JourneyRoute
   '/mentor': typeof MentorRoute
   '/mistakes': typeof MistakesRoute
+  '/mun-builder': typeof MunBuilderRoute
+  '/pathway': typeof PathwayRoute
   '/practice': typeof PracticeRoute
   '/quotes': typeof QuotesRoute
   '/resources': typeof ResourcesRoute
+  '/skills': typeof SkillsRoute
   '/speakers': typeof SpeakersRoute
   '/speech-writing': typeof SpeechWritingRoute
   '/tips': typeof TipsRoute
@@ -136,16 +171,21 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/acknowledgements': typeof AcknowledgementsRoute
   '/builder': typeof BuilderRoute
+  '/checklist': typeof ChecklistRoute
   '/coach': typeof CoachRoute
   '/competitions': typeof CompetitionsRoute
+  '/dashboard': typeof DashboardRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
   '/journey': typeof JourneyRoute
   '/mentor': typeof MentorRoute
   '/mistakes': typeof MistakesRoute
+  '/mun-builder': typeof MunBuilderRoute
+  '/pathway': typeof PathwayRoute
   '/practice': typeof PracticeRoute
   '/quotes': typeof QuotesRoute
   '/resources': typeof ResourcesRoute
+  '/skills': typeof SkillsRoute
   '/speakers': typeof SpeakersRoute
   '/speech-writing': typeof SpeechWritingRoute
   '/tips': typeof TipsRoute
@@ -156,16 +196,21 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/acknowledgements': typeof AcknowledgementsRoute
   '/builder': typeof BuilderRoute
+  '/checklist': typeof ChecklistRoute
   '/coach': typeof CoachRoute
   '/competitions': typeof CompetitionsRoute
+  '/dashboard': typeof DashboardRoute
   '/faq': typeof FaqRoute
   '/guide': typeof GuideRoute
   '/journey': typeof JourneyRoute
   '/mentor': typeof MentorRoute
   '/mistakes': typeof MistakesRoute
+  '/mun-builder': typeof MunBuilderRoute
+  '/pathway': typeof PathwayRoute
   '/practice': typeof PracticeRoute
   '/quotes': typeof QuotesRoute
   '/resources': typeof ResourcesRoute
+  '/skills': typeof SkillsRoute
   '/speakers': typeof SpeakersRoute
   '/speech-writing': typeof SpeechWritingRoute
   '/tips': typeof TipsRoute
@@ -177,16 +222,21 @@ export interface FileRouteTypes {
     | '/'
     | '/acknowledgements'
     | '/builder'
+    | '/checklist'
     | '/coach'
     | '/competitions'
+    | '/dashboard'
     | '/faq'
     | '/guide'
     | '/journey'
     | '/mentor'
     | '/mistakes'
+    | '/mun-builder'
+    | '/pathway'
     | '/practice'
     | '/quotes'
     | '/resources'
+    | '/skills'
     | '/speakers'
     | '/speech-writing'
     | '/tips'
@@ -196,16 +246,21 @@ export interface FileRouteTypes {
     | '/'
     | '/acknowledgements'
     | '/builder'
+    | '/checklist'
     | '/coach'
     | '/competitions'
+    | '/dashboard'
     | '/faq'
     | '/guide'
     | '/journey'
     | '/mentor'
     | '/mistakes'
+    | '/mun-builder'
+    | '/pathway'
     | '/practice'
     | '/quotes'
     | '/resources'
+    | '/skills'
     | '/speakers'
     | '/speech-writing'
     | '/tips'
@@ -215,16 +270,21 @@ export interface FileRouteTypes {
     | '/'
     | '/acknowledgements'
     | '/builder'
+    | '/checklist'
     | '/coach'
     | '/competitions'
+    | '/dashboard'
     | '/faq'
     | '/guide'
     | '/journey'
     | '/mentor'
     | '/mistakes'
+    | '/mun-builder'
+    | '/pathway'
     | '/practice'
     | '/quotes'
     | '/resources'
+    | '/skills'
     | '/speakers'
     | '/speech-writing'
     | '/tips'
@@ -235,16 +295,21 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AcknowledgementsRoute: typeof AcknowledgementsRoute
   BuilderRoute: typeof BuilderRoute
+  ChecklistRoute: typeof ChecklistRoute
   CoachRoute: typeof CoachRoute
   CompetitionsRoute: typeof CompetitionsRoute
+  DashboardRoute: typeof DashboardRoute
   FaqRoute: typeof FaqRoute
   GuideRoute: typeof GuideRoute
   JourneyRoute: typeof JourneyRoute
   MentorRoute: typeof MentorRoute
   MistakesRoute: typeof MistakesRoute
+  MunBuilderRoute: typeof MunBuilderRoute
+  PathwayRoute: typeof PathwayRoute
   PracticeRoute: typeof PracticeRoute
   QuotesRoute: typeof QuotesRoute
   ResourcesRoute: typeof ResourcesRoute
+  SkillsRoute: typeof SkillsRoute
   SpeakersRoute: typeof SpeakersRoute
   SpeechWritingRoute: typeof SpeechWritingRoute
   TipsRoute: typeof TipsRoute
@@ -274,6 +339,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BuilderRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/checklist': {
+      id: '/checklist'
+      path: '/checklist'
+      fullPath: '/checklist'
+      preLoaderRoute: typeof ChecklistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/coach': {
       id: '/coach'
       path: '/coach'
@@ -286,6 +358,13 @@ declare module '@tanstack/react-router' {
       path: '/competitions'
       fullPath: '/competitions'
       preLoaderRoute: typeof CompetitionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -323,6 +402,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MistakesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mun-builder': {
+      id: '/mun-builder'
+      path: '/mun-builder'
+      fullPath: '/mun-builder'
+      preLoaderRoute: typeof MunBuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pathway': {
+      id: '/pathway'
+      path: '/pathway'
+      fullPath: '/pathway'
+      preLoaderRoute: typeof PathwayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/practice': {
       id: '/practice'
       path: '/practice'
@@ -342,6 +435,13 @@ declare module '@tanstack/react-router' {
       path: '/resources'
       fullPath: '/resources'
       preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/skills': {
+      id: '/skills'
+      path: '/skills'
+      fullPath: '/skills'
+      preLoaderRoute: typeof SkillsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/speakers': {
@@ -379,16 +479,21 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AcknowledgementsRoute: AcknowledgementsRoute,
   BuilderRoute: BuilderRoute,
+  ChecklistRoute: ChecklistRoute,
   CoachRoute: CoachRoute,
   CompetitionsRoute: CompetitionsRoute,
+  DashboardRoute: DashboardRoute,
   FaqRoute: FaqRoute,
   GuideRoute: GuideRoute,
   JourneyRoute: JourneyRoute,
   MentorRoute: MentorRoute,
   MistakesRoute: MistakesRoute,
+  MunBuilderRoute: MunBuilderRoute,
+  PathwayRoute: PathwayRoute,
   PracticeRoute: PracticeRoute,
   QuotesRoute: QuotesRoute,
   ResourcesRoute: ResourcesRoute,
+  SkillsRoute: SkillsRoute,
   SpeakersRoute: SpeakersRoute,
   SpeechWritingRoute: SpeechWritingRoute,
   TipsRoute: TipsRoute,
