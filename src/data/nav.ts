@@ -6,6 +6,11 @@ export const navItems: NavItem[] = [
   { to: "/guide", label: "Beginner's Guide", blurb: "Six lessons: stage fear, practice, body language, voice, confidence" },
   { to: "/speech-writing", label: "Speech Writing", blurb: "Introduction, body, conclusion and seven speech structures including MUN" },
   { to: "/competitions", label: "Competitions", blurb: "Speech, debate, declamation, elocution, anchoring, MUN and more" },
+  { to: "/dashboard", label: "My Dashboard", blurb: "All your saved progress in one place" },
+  { to: "/pathway", label: "Learning Pathway", blurb: "Four levels from starter to competitor" },
+  { to: "/skills", label: "Skill Studio", blurb: "Voice, body language and storytelling exercises" },
+  { to: "/checklist", label: "Competition Checklist", blurb: "Prepare step by step for any competition" },
+  { to: "/mun-builder", label: "MUN Builder", blurb: "Build a Model United Nations opening speech" },
   { to: "/builder", label: "Speech Builder", blurb: "Generate a speech outline from topic, audience, time, tone and purpose" },
   { to: "/coach", label: "Practice Coach", blurb: "Timer, live transcript, pace and filler-word counter" },
   { to: "/mentor", label: "My Mentor", blurb: "Mr. Jabir Thayyil — the teacher who started my journey" },
@@ -21,5 +26,5 @@ export const navItems: NavItem[] = [
 ];
 
 export const primaryNav = navItems.filter((i) =>
-  ["/", "/journey", "/guide", "/speech-writing", "/builder", "/tips"].includes(i.to),
+  ["/", "/journey", "/guide", "/speech-writing", "/pathway", "/builder", "/dashboard"].includes(i.to),
 );

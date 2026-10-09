@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { speakers } from "@/data/library";
+import { moreSpeakers } from "@/data/extras";
 
 export const Route = createFileRoute("/speakers")({
   head: () => ({
@@ -43,6 +44,17 @@ function SpeakersPage() {
                 </p>
               </article>
             </Reveal>
+          ))}
+        </ul>
+      </Section>
+      <Section title="More speakers to study" description="Quick lessons from ten more communicators.">
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {moreSpeakers.map((s) => (
+            <li key={s.name} className="rounded-2xl border border-border/60 bg-card p-5 card-lift">
+              <h3 className="font-semibold">{s.name}</h3>
+              <p className="text-xs text-highlight">{s.known}</p>
+              <p className="mt-2 text-sm text-muted-foreground">{s.lesson}</p>
+            </li>
           ))}
         </ul>
       </Section>

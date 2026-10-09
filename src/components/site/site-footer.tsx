@@ -6,7 +6,7 @@ export function SiteFooter() {
   return (
     <footer className="no-print mt-24 border-t border-border/60 bg-secondary/40">
       <div className="mx-auto max-w-6xl px-4 py-14">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1.2fr]">
+        <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
           <div>
             <div className="flex items-center gap-2">
               <span className="grid size-9 place-items-center rounded-xl gradient-hero text-primary-foreground">
@@ -24,6 +24,19 @@ export function SiteFooter() {
             <h3 className="text-sm font-semibold">Explore</h3>
             <ul className="mt-3 grid gap-2 text-sm">
               {navItems.slice(1, 9).map((i) => (
+                <li key={i.to}>
+                  <Link to={i.to} className="text-muted-foreground transition-colors hover:text-foreground">
+                    {i.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold">Tools</h3>
+            <ul className="mt-3 grid gap-2 text-sm">
+              {navItems.slice(9).map((i) => (
                 <li key={i.to}>
                   <Link to={i.to} className="text-muted-foreground transition-colors hover:text-foreground">
                     {i.label}
