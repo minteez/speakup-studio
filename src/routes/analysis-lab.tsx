@@ -13,7 +13,7 @@ export const Route = createFileRoute("/analysis-lab")({
 const QS = ["What made this speech memorable?", "What techniques did you notice?", "What would you borrow for your own speaking?"];
 
 function AnalysisLab() {
-  const [id, setId] = useState(analysisSpeeches[0].id);
+  const [id, setId] = useState(analysisSpeeches[0]!.id);
   const [answers, setAnswers] = useState<string[]>(["", "", ""]);
   const [saved, setSaved] = useState(false);
   const s = analysisSpeeches.find((x) => x.id === id)!;
