@@ -22,6 +22,15 @@ export const navItems: NavItem[] = [
   { to: "/quotes", label: "Quote Library", blurb: "Motivational quotes about speaking and confidence" },
   { to: "/resources", label: "Resources", blurb: "Speeches to watch, voice exercises, MUN and vocabulary resources" },
   { to: "/faq", label: "FAQ", blurb: "Around 30 common questions from beginner speakers" },
+  { to: "/learn", label: "Learn (7 Levels)", blurb: "Curriculum from foundations to advanced communication" },
+  { to: "/practice-mode", label: "Practice Mode", blurb: "Full-screen practice with timer, reflection and history" },
+  { to: "/analyzer", label: "Speech Analyzer", blurb: "Paste your speech to check structure, length and transitions" },
+  { to: "/analysis-lab", label: "Analysis Lab", blurb: "Analyse famous speeches and techniques" },
+  { to: "/rhetoric", label: "Rhetoric Lab", blurb: "Ethos, pathos, logos, anaphora, rule of three and more" },
+  { to: "/challenges", label: "Challenges", blurb: "7, 14 and 30-day speaking challenges" },
+  { to: "/communication", label: "Communication Skills", blurb: "Conversation, pronunciation, fluency and role-play" },
+  { to: "/learn-more", label: "Learn More", blurb: "Courses, speech organizations and video learning" },
+  { to: "/about", label: "About", blurb: "What SpeakUp is, why it was built, TPM Group and credits" },
   { to: "/acknowledgements", label: "Acknowledgements", blurb: "Thanks to teachers, school, parents and students" },
 ];
 
