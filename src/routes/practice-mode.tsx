@@ -15,7 +15,7 @@ type Entry = { date: string; prompt: string; target: number; used: number; answe
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.abs(s) % 60).padStart(2, "0")}`;
 
 function PracticeMode() {
-  const [prompt, setPrompt] = useState(practicePrompts[0]);
+  const [prompt, setPrompt] = useState<string>(practicePrompts[0]!);
   const [target, setTarget] = useState(120);
   const [notes, setNotes] = useState("");
   const [phase, setPhase] = useState<"setup" | "countdown" | "speaking" | "review">("setup");
@@ -40,6 +40,7 @@ function PracticeMode() {
       const t = setInterval(() => setElapsed((e) => e + 1), 1000);
       return () => clearInterval(t);
     }
+    return undefined;
   }, [phase, count, paused]);
 
   const start = () => {
@@ -70,7 +71,7 @@ function PracticeMode() {
               <label className="text-sm font-medium">Prompt
                 <div className="mt-2 flex gap-2">
                   <input value={prompt} onChange={(e) => setPrompt(e.target.value)} className="flex-1 rounded-xl border border-input bg-background px-3 py-2 text-sm" />
-                  <button onClick={() => setPrompt(practicePrompts[Math.floor(Math.random() * practicePrompts.length)])} className="rounded-xl border border-border px-3 text-sm">Random</button>
+                  <button onClick={() => setPrompt(practicePrompts[Math.floor(Math.random() * practicePrompts.length)]!)} className="rounded-xl border border-border px-3 text-sm">Random</button>
                 </div>
               </label>
               <label className="text-sm font-medium">Time limit
