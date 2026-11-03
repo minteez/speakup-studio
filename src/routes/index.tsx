@@ -45,10 +45,7 @@ function Home() {
         <div className="pointer-events-none absolute -right-24 bottom-0 size-80 rounded-full gradient-hero opacity-15 blur-3xl" />
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:py-24 lg:grid-cols-2">
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-border/60 glass px-3 py-1 text-xs font-semibold uppercase tracking-widest">
-              <Sparkles className="size-3.5 text-highlight" /> Free · No login · No ads
-            </span>
-            <h1 className="mt-5 text-4xl font-extrabold leading-tight sm:text-6xl">
+            <h1 className="text-4xl font-extrabold leading-tight sm:text-6xl">
               Everyone Can Become a <span className="text-gradient">Great Speaker.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg text-muted-foreground">
